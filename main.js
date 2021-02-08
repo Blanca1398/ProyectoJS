@@ -1,4 +1,3 @@
-
 window.onload = function () {
     var contIdTask = 0;
 
@@ -36,6 +35,16 @@ window.onload = function () {
             buttonDelete.type = 'button';
             buttonDelete.title = 'Eliminar Tarea';
 
+            buttonDelete.addEventListener("click", () => {
+                var opcion = confirm(`¿Estas seguro que deseas eliminar la tarea: ${document.getElementById('pText'+checkBoxTask.id.substring(12)).innerText}?`);
+                if (opcion == true) {
+                    const currentTask = document.getElementById('newTask'+checkBoxTask.id.substring(12));	
+                    currentTask.parentNode.removeChild(currentTask);
+                } else {
+                    // Ok no hago nada
+                }
+            });
+
             var pText = document.createElement('p');
             pText.id = 'pText' + contIdTask;
             pText.innerText = inputTask.value;
@@ -51,7 +60,6 @@ window.onload = function () {
                     document.getElementById('newTask'+checkBoxTask.id.substring(12)).classList.remove('done');
                 }
             });
-            
 
             inputTask.value = '';
             newTask.appendChild(checkBoxTask);
@@ -66,5 +74,3 @@ window.onload = function () {
         }
     });
 }
-
-
