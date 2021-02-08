@@ -45,10 +45,12 @@ window.onload = function () {
             checkBoxTask.type = 'checkbox';
             
             checkBoxTask.addEventListener("change", () => {
-                
-                checkBoxTaskId = checkBoxTask.id.substring(12);
-                /*var pText = document.getElementById('pText'+checkBoxTaskId);*/
-                alert('TareaCompletada'+checkBoxTaskId);
+                if(checkBoxTask.checked == true){
+                    checkBoxTaskId = checkBoxTask.id.substring(12);
+                    document.getElementById("newTask0").classList.add("done");
+                } else {
+                    document.getElementById("newTask0").classList.remove("done");
+                }
             });
             
 
