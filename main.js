@@ -52,6 +52,16 @@ window.onload = function () {
     };
 
     //functions
+    function completeTaks(dataBase, box, id){
+
+        if(box.checked === true){
+            box = box.id.substring(12);
+        }else{
+            alert('TareaCompletada' + id);
+        }
+
+        /*var pText = document.getElementById('pText'+checkBoxTaskId);*/
+    }
     function addTask(id, value, complete) {
         let newTask = new task(id, value, complete);
         db.tasks.push(newTask);
@@ -82,12 +92,11 @@ window.onload = function () {
                 var checkBoxTask = document.createElement('input');
                 checkBoxTask.id = 'checkBoxTask' + task.id;
                 checkBoxTask.type = 'checkbox';
-    
+
                 checkBoxTask.addEventListener("change", () => {
-    
-                    checkBoxTaskId = checkBoxTask.id.substring(12);
-                    /*var pText = document.getElementById('pText'+checkBoxTaskId);*/
-                    alert('TareaCompletada' + task.id);
+                    
+                    completeTaks(task,checkBoxTask,task.id);
+                    
                 });
     
     
@@ -107,7 +116,7 @@ window.onload = function () {
     buttonAdd.addEventListener("click", () => {
         if (inputTask.value != '') {
 
-            addTask(contIdTask, inputTask.value, false);
+            addTask(contIdTask, inputTask.value, 0);
 
             inputTask.value = '';
 
