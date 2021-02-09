@@ -3,7 +3,7 @@ window.onload = function () {
 
     var tittleText = document.createElement('h1');
     tittleText.id = 'tittleText';
-    tittleText.innerText = 'Todo App';
+    tittleText.innerText = 'To do App';
 
     let db = JSON.parse(localStorage.getItem('todoDB'));
 
