@@ -2,15 +2,24 @@
 window.onload = function () {
     var contIdTask = 0;
 
+    var tittleText = document.createElement('h1');
+    tittleText.id = 'tittleText';
+    tittleText.innerText = 'Todo App';
+    
     var inputTask = document.createElement('input');
     inputTask.id = 'inputTask';
-    inputTask.placeholder = 'Escribe tu tarea aqui C:'
+    inputTask.placeholder = 'New Task'
 
     var buttonAdd = document.createElement('button');
     buttonAdd.id = 'buttonAdd';
-    buttonAdd.innerText = 'Agregar';
+    buttonAdd.innerText = 'Add';
     buttonAdd.type = 'button';
     buttonAdd.title = 'Agregar nueva tarea';
+    
+    var divContainer = document.createElement('div');
+    divContainer.id = 'divContainer';
+    
+    
     var app = document.getElementById('app');
 
     var sectionTask = document.createElement('section');
@@ -18,10 +27,12 @@ window.onload = function () {
 
     var listTask = document.createElement('ul');
     listTask.id = 'listTask';
-
-
-    app.appendChild(inputTask);
-    app.appendChild(buttonAdd);
+    
+    
+    app.appendChild(tittleText);
+    divContainer.appendChild(inputTask);
+    divContainer.appendChild(buttonAdd);
+    app.appendChild(divContainer);
     sectionTask.appendChild(listTask);
     app.appendChild(sectionTask);
 

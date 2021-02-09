@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    background-image: url(images/fondoLibreta.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    overflow-y: scroll;
+
+}
+
+#tittleText {
+    font-family: 'Gochi Hand';
+    font-size: 4em;
+}
+
+#buttonAdd {
+    border: none;
+    transform: rotate(-4deg);
+    transform-origin: center;
+    font-family: 'Gochi Hand';
+    font-size: 1.5em;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 #5a5a5a;
+    background-color: #00bb2d;
+    color: #ffffff;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#buttonAdd:hover {
+    background-color: #ee8d85;
+    transform: rotate(8deg);
+    transform-origin: center;
+}
+
+#inputTask {
+    font-size: 1.5em;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
+
+}
+
+#inputTask:focus {
+    outline: none !important;
+    border-left-color: #00bb2d;
+    border-color: #00bb2d;
+}
+
+#divContainer {
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+section {
+    display: inline-block;
+    width: 600px;
+    border: #5a5a5a 2px solid;
+}
+
+li {
+    position: relative;
+    padding: 0.5rem;
+    list-style: none;
+}
+
+li > p {
+    font-size: 1.5em;
+    font-family: 'Indie Flower', cursive;
+    display: inline;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+li > button {
+    background-color: crimson;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'Gochi Hand';
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 #5a5a5a;
+    border: none;
+    margin-left: auto;
+    margin-right: 5px;
+    float: right;
+
+}
+
+li > p:hover {
+    text-decoration: line-through wavy #e7766e;
+}
+
+@media (max-width: 767.98px) {
+    section {
+        width: 80vw;
+    }
+}
