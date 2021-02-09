@@ -61,7 +61,6 @@ window.onload = function () {
     //functions
     function completeTaks(id) {
 
-        console.log("Holas" + id);
         for (var i = 0; i < db.tasks.length; i++) {
             if (db.tasks[i].id == parseInt(id, 10)) {
                 idTask = i;

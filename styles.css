@@ -112,4 +112,26 @@ li > p:hover {
     section {
         width: 80vw;
     }
+
+    li > p {
+        font-size: 2em;
+    }
+
+    li > button {
+        font-size: 2em;
+    }
+
+    #inputTask {
+        font-size: 2em;
+
+    }
+
+    #tittleText {
+        font-family: 'Gochi Hand';
+        font-size: 6em;
+    }
+
+    #buttonAdd {
+        font-size: 2em;
+    }
 }
