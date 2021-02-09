@@ -1,7 +1,7 @@
-.done{
+.done > p{
     opacity: 0.6;
     text-decoration: line-through;
 }
-.done:hover {
+.done:hover >p{
     opacity: 1;
 }
